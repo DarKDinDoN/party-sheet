@@ -1,0 +1,37 @@
+{
+    "name": "party-sheet",
+    "title": "Party Sheet",
+    "description": "A user interface to display character portraits & hp",
+    "version": "This is auto replaced",
+    "library": "false",
+    "manifestPlusVersion": "1.0.0",
+    "minimumCoreVersion": "0.8.6",
+    "compatibleCoreVersion": "0.8.9",
+    "authors": [
+        {
+            "name": "DarKDinDoN",
+            "url": "https://github.com/DarKDinDoN",
+            "discord": "Maxime#1562"
+        }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "esmodules": [
+        "/modules/main.js"
+    ],
+    "scripts": [],
+    "styles": [
+        "/styles/main.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "languages/en.json"
+        }
+    ],
+    "url": "This is auto replaced",
+    "manifest": "This is auto replaced",
+    "download": "This is auto replaced",
+    "media": []
+}

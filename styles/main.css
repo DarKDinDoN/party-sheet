@@ -1,0 +1,226 @@
+#party-sheet-box {
+  position: absolute;
+  z-index: 1000;
+}
+
+#party-sheet-box .actions {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  -webkit-transition: opacity 250ms;
+  -o-transition: opacity 250ms;
+  transition: opacity 250ms;
+  opacity: 0;
+}
+
+#party-sheet-box .actions div {
+  background: url("../../../ui/denim075.png") repeat;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 2px 2px 0 2px;
+  border-radius: 2px;
+  color: #cccccc;
+  margin-bottom: 5px;
+}
+
+#party-sheet-box:hover .actions {
+  opacity: .75;
+}
+
+#party-sheet-box .party-sheet-frames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#party-sheet-box .party-sheet-frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+#party-sheet-box .attributes {
+  background: url("../../../ui/denim075.png") repeat;
+  border: 1px solid #a1874c;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 1px #55472a, inset 0px 0px 0px 1px #55472a;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 1px #55472a, inset 0px 0px 0px 1px #55472a;
+  padding: 2px;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 95%;
+}
+
+#party-sheet-box .attributes .attribute {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  color: #cccccc;
+  font-size: 10px;
+  padding: 2px;
+}
+
+#party-sheet-box .attributes .attribute i {
+  width: 15px;
+}
+
+#party-sheet-box .portrait {
+  background: url("../../../ui/denim075.png") repeat;
+  border: 1px solid #a1874c;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 1px #55472a, inset 0px 0px 0px 1px #55472a;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 1px #55472a, inset 0px 0px 0px 1px #55472a;
+  padding: 2px;
+  z-index: 5;
+  border-radius: 2px;
+  width: 75px;
+  height: 75px;
+}
+
+#party-sheet-box .portrait img {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+#party-sheet-box .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+#party-sheet-box .name {
+  margin: 0 0 2px 5px;
+  text-shadow: 0px 0px 4px #000000;
+  color: #e1d461;
+  font-size: 14px;
+}
+
+#party-sheet-box .effects {
+  margin: 0 0 2px 5px;
+}
+
+#party-sheet-box .effects img {
+  background: url("../../../ui/denim075.png") repeat;
+  width: 15px;
+  height: 15px;
+}
+
+#party-sheet-box .bar {
+  background: url("../../../ui/denim075.png") repeat;
+  border: 1px solid #a1874c;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 1px #55472a, inset 0px 0px 0px 1px #55472a;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 1px #55472a, inset 0px 0px 0px 1px #55472a;
+  padding: 2px;
+  position: relative;
+  width: 100px;
+  height: 20px;
+  overflow: hidden;
+  margin: 0 0 5px -5px;
+  -webkit-transform: skew(20deg);
+  -ms-transform: skew(20deg);
+  transform: skew(20deg);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#party-sheet-box .progress-container {
+  position: relative;
+  height: 100%;
+}
+
+#party-sheet-box .progress {
+  position: absolute;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 3px;
+}
+
+#party-sheet-box .progress.hptempmax {
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #2d0044;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2d0044), color-stop(25%, #31004a), color-stop(50%, #360050), color-stop(80%, #440066), to(#3b0059));
+  background: -o-linear-gradient(bottom, #2d0044 0%, #31004a 25%, #360050 50%, #440066 80%, #3b0059 100%);
+  background: linear-gradient(360deg, #2d0044 0%, #31004a 25%, #360050 50%, #440066 80%, #3b0059 100%);
+}
+
+#party-sheet-box .progress.hpvalue {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #900000;
+  background: -webkit-gradient(linear, left bottom, left top, from(#540000), color-stop(25%, #780001), color-stop(50%, #900000), color-stop(80%, #b80002), to(#a10908));
+  background: -o-linear-gradient(bottom, #540000 0%, #780001 25%, #900000 50%, #b80002 80%, #a10908 100%);
+  background: linear-gradient(360deg, #540000 0%, #780001 25%, #900000 50%, #b80002 80%, #a10908 100%);
+}
+
+#party-sheet-box .progress.hptemp {
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  height: 25%;
+  background: #66ccff;
+}
+
+#party-sheet-box .hp-detail {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 1px;
+  text-align: center;
+  font-size: 10px;
+  color: #ffffff;
+  opacity: .75;
+  -webkit-transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+  transform: skew(-20deg);
+}
+
+#party-sheet-box .glass-effect {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(100% 0, 100% 17%, 78% 12%, 49% 12%, 0 24%, 0 0);
+  clip-path: polygon(100% 0, 100% 17%, 78% 12%, 49% 12%, 0 24%, 0 0);
+  background: rgba(255, 255, 255, 0.3);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 3px;
+}

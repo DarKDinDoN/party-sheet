@@ -1,0 +1,52 @@
+<div id="party-sheet-box" style="top: {{pos.top}}px; left: {{pos.left}}px">
+    <div class="actions">
+        <div class="move-handle"><i class="fas fa-arrows-alt"></i></div>
+        <div class="reposition-bottom"><i class="fas fas fa-border-style"></i></div>
+    </div>
+    <div class="party-sheet-frames">
+        {{#each frames}}
+            <div class="party-sheet-frame" id="party-sheet-frame-{{this.id}}" data-id="{{this.id}}">
+                {{#if ../isGM}}
+                    <div class="attributes">
+                        <div class="attribute perception" title="{{localize "DND5E.SkillPrc"}}">
+                            <i class="far fa-eye"></i>
+                            <div class="value">{{perception}}</div>
+                        </div>
+                        <div class="attribute insight" title="{{localize "DND5E.SkillIns"}}">
+                            <i class="fas fa-brain"></i>
+                            <div class="value">{{insight}}</div>
+                        </div>
+                        <div class="attribute investigation" title="{{localize "DND5E.SkillInv"}}">
+                            <i class="fas fa-search"></i>
+                            <div class="value">{{investigation}}</div>
+                        </div>
+                        <div class="attribute stealth" title="{{localize "DND5E.SkillSte"}}">
+                            <i class="fas fa-user-secret"></i>
+                            <div class="value">{{stealth}}</div>
+                        </div>
+                    </div>
+                {{/if}}
+                <div class="portrait">
+                    <img src="{{this.img}}">
+                </div>
+                <div class="details">
+                    <div class="name">{{this.name}}</div>
+                    <div class="effects">
+                        {{#each this.effects}}
+                            <img src="{{this.data.icon}}" title="{{this.data.label}}">
+                        {{/each}}
+                    </div>
+                    <div class="bar">
+                        <div class="progress-container">
+                            <div class="progress hptempmax" style="width: {{this.hpTempMaxPercent}}%;"></div>
+                            <div class="progress hpvalue" style="width: {{this.hpValuePercent}}%;"></div>
+                            <div class="progress hptemp" style="width: {{this.hpTempPercent}}%;"></div>
+                            <div class="hp-detail">{{this.hpValue}}/{{this.hpMax}}</div>
+                            <div class="glass-effect"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
