@@ -67,12 +67,8 @@ export default class PartySheetApplication extends RepositionableApplication {
         html.find('.portrait').dblclick(this.openSheet.bind(this))
     }
 
-    repositionBottom(ev) {
-        ev.preventDefault()
-        ev = ev || window.event
-        const hud = $(ev.currentTarget).parent().parent()[0]
-
-        game.settings.set(constants.moduleName, 'party-sheet-box-position', { top: window.innerHeight - hud.offsetHeight - 5, left: 20 });
+    repositionBottom() {
+        game.settings.set(constants.moduleName, 'party-sheet-box-position', { top: window.innerHeight - this.element[0].offsetHeight - 5, left: 20 });
         ui.partySheet.render()
     }
 

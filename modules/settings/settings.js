@@ -20,4 +20,13 @@ export default function registerSettings() {
             window.location.reload()
         }
     })
+
+    game.settings.register(constants.moduleName, 'party-sheet-auto-reposition', {
+        name: 'Update the HUD position automatically',
+        hint: 'Automatically update de the HUD position when a new player log in or log off.',
+        scope: 'client',
+        config: true,
+        type: Boolean,
+        default: false
+    })
 }

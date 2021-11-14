@@ -12,11 +12,15 @@ Hooks.once('ready', () => {
 
 Hooks.on('canvasReady', () => {
     if (ui.partySheet) ui.partySheet.render()
+    setTimeout(() => {
+        if (ui.partySheet && game.settings.get(constants.moduleName, 'party-sheet-auto-reposition')) ui.partySheet.repositionBottom()
+    }, 1000)
 })
 
 Hooks.on('renderPlayerList', (players, html) => {
     if (game.settings.get(constants.moduleName, 'party-sheet-hide-default-players')) html[0].style.display = 'none'
     if (ui.partySheet) ui.partySheet.render()
+    if (ui.partySheet && game.settings.get(constants.moduleName, 'party-sheet-auto-reposition')) ui.partySheet.repositionBottom()
 })
 
 Hooks.on('updateActor', actor => {
