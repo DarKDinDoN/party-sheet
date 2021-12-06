@@ -52,7 +52,7 @@ export default class PartySheetApplication extends RepositionableApplication {
                 effects: a.data.effects.filter(e => e.data.disabled === false && e.isSuppressed === false && e.isTemporary),
                 perception: a.data.data.skills.prc.passive,
                 investigation: a.data.data.skills.inv.passive,
-                insight: a.data.data.skills.inv.passive,
+                insight: a.data.data.skills.ins.passive,
                 stealth: a.data.data.skills.ste.passive
             })
         }
