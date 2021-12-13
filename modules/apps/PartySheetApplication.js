@@ -27,6 +27,9 @@ export default class PartySheetApplication extends RepositionableApplication {
         options.actors = this.getActors()
         options.frames = this.prepareActors(options.actors)
         options.isGM = game.users.current.isGM
+        options.modules = {
+            'rpg-styled-ui': game.modules.get('rpg-styled-ui')?.active
+        }
 
         return options
     }
